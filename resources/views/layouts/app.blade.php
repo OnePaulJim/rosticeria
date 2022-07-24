@@ -4,7 +4,7 @@
 
 <!--###################################################################################-->
 <!--actualizar auto pag WEB http-equiv="refresh" content="10"-->
-<meta charset="utf-8" http-equiv="refresh" content="2">
+<meta charset="utf-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
