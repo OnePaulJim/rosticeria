@@ -1,0 +1,268 @@
+:root{
+    --red:#9b0d43;
+    --black:#252a34;
+    --blue:#08d9d6;
+    --white:#eaeaea;
+    --title:35px;
+    --text:19px;
+ }
+ 
+ *{
+     margin:0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+ body{
+     background: rgb(228, 163, 203);;
+     overflow-x: hidden;
+     font-family: 'Red Hat Text', sans-serif;
+ }
+.go-top{
+    position: fixed;
+    bottom: 100px;
+    right: -100%;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border:2px solid var(--red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: 0.5s;
+}
+.go-top:hover{
+    background: var(--red);
+    color:#fff;
+    border: 2px solid var(--white);
+}
+.go-top:hover span{color:var(--white);}
+
+.go-top > span{
+   font-size: 30px;
+   color: var(--black);
+}
+#header{
+    position: relative;
+    width: 100%;
+}
+.menu{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 105px;
+    background: rgb(228, 163, 203);;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+}
+.menu .logo-box{margin-left: 20px;}
+.menu .logo-box h1 a{
+    text-decoration: none;
+    font-size: var(--title);
+    font-weight: 400;
+    color:var(--black);
+}
+.menu .list-container{margin-right: 20px;}
+.menu .list-container ul{display: flex;}
+.menu .list-container ul li{list-style: none;}
+.menu .list-container ul li a{
+    text-decoration: none;
+    margin: 0px 10px;
+    padding:8px;
+    color: var(--black);
+    border-radius: 24px;
+    transition: 0.3s;
+    font-size: 16px;
+}
+.menu .list-container ul li a.active{
+    background: var(--red);
+    color:#fff;
+}
+.menu .list-container ul li a:hover{
+    background: var(--red);
+    color:#fff;
+}
+
+.btn-menu > .fa-bars{
+    display: none;
+}
+
+@media only screen and (max-width:900px){
+    .btn-menu > .fa-bars{
+        display: block;
+        position:absolute;
+        right: 30px;
+        top: 20px;
+        font-size: 28px;
+        color: var(--black);
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    .btn-menu > .fa-times{color: var(--red);}
+    .btn-menu > .fa-bars:hover{color:var(--red);}
+    .menu .logo-box{margin-left: 30px;}
+    .menu .list-container{
+        position: fixed;
+        top:60px;
+        left:-100%;
+        background:#fff;
+        width: 100%;
+        height: calc(100vh - 60px);
+    }
+    .menu .list-container .lists{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-top:4px solid var(--red);
+    }
+    .menu .list-container ul li{
+        width: 90%;
+        border-bottom: 2px solid var(--black);
+        display: flex;
+        justify-content: center;
+    }
+    .menu .list-container ul li a{
+        font-size: 20px;
+        text-align: center;
+        padding:12px 0px;
+    }
+    .menu .list-container ul li a.active{
+        background: none;
+        color:var(--red);
+    }
+    .menu .list-container ul li a:hover{
+        background: none;
+        color:var(--red);
+    }
+}
+/** Navegation Menu **/
+
+/** IMG Header **/
+.img-header{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background:url(../img/nuevasImagenes/palaciorafaelde.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.img-header .welcome{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.img-header .welcome h1{
+    font-size: 50px;
+    color:#fff;
+    font-weight: 200;
+}
+.img-header .welcome hr{
+    width: 400px;
+    height: 2px;
+    background: #fff;
+    border: none;
+    margin-top: 5px;
+}
+.img-header .welcome p{
+    font-size: 20px;
+    color: #fff;
+    margin-top: 20px;
+}
+.img-header .welcome h2{
+    font-size: 20px;
+    color: #fff;
+    margin-top: 20px;
+}
+.img-header .welcome > button{
+    width: 170px;
+    height: 40px;
+    background: var(--red);
+    border-radius: 24px;
+    border:none;
+    outline: none;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.img-header .welcome > button:hover{
+    background:var(--white);
+}
+
+@media only screen and (max-width:773px ){
+    .img-header .welcome h1{font-size: 40px;}
+    .img-header .welcome > button{width: 130px; font-size: 20px;}
+}
+@media only screen and (max-width:590px){
+    .img-header .welcome h1{font-size: 30px;}
+    .img-header .welcome hr{width: 100px;}
+    .img-header .welcome p{font-size: 17px;}
+    .img-header .welcome > button{width: 100px; font-size: 17px;}
+}
+
+.hero {
+    height: 600px;
+    position: relative; }
+    @media (min-width: 992px) {
+      .hero {
+        height: calc(100vh - 130px); } }
+  
+  .hero-info {
+    padding-top: 60px; }
+    @media (min-width: 1420px) {
+      .hero-info {
+        padding-top: 140px; } }
+    .hero-info li {
+      padding-right: 15px;
+      padding-left: 15px; }
+    .hero-info .lnr {
+      display: block;
+      font-size: 32px;
+      margin-bottom: 15px; }
+  
+  .hero-carousel .owl-prev, .hero-carousel .owl-next {
+    width: 110px;
+    height: 110px; }
+  
+  .hero-carousel .owl-prev, .hero-carousel .owl-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent; }
+  
+  .hero-carousel .owl-prev {
+    width: 600px;
+    border-right: 1px solid #80d610; }
+  
+  .hero-carousel .owl-nav {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0; }
+  
+  .hero-carousel .owl-item img {
+    height: 600px;
+    object-fit: cover;
+    max-width: 100%; }
+    @media (min-width: 992px) {
+      .hero-carousel .owl-item img {
+        height: calc(100vh - 130px); } }
